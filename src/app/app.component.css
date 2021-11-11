@@ -1,8 +1,11 @@
 .toolbar-spacer {
-    flex: 1 1 auto;
-  }
+  flex: 1 1 auto;
+}
 
-  a.title {
-    color: white;
-    text-decoration: none;
-  }
+a.title {
+  color: white;
+  text-decoration: none;
+}
+button {
+  margin-left: 10px;
+}

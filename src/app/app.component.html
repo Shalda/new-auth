@@ -1,7 +1,8 @@
 <mat-toolbar color="primary">
   <a class="title" href="/">{{ title }}</a>
   <div class="toolbar-spacer"></div>
-  <button mat-raised-button *ngIf="!loginDisplay" (click)="loginPopup()">Login</button>
+  <button mat-raised-button *ngIf="!loginDisplay" (click)="loginPopup()">Login to Azure</button>
+  <button mat-raised-button *ngIf="!loginDisplay" (click)="loginPopup()">Login to AWS</button>
   <button mat-raised-button *ngIf="loginDisplay" (click)="logout()">Logout</button>
 </mat-toolbar>
 <div class="container">

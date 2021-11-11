@@ -10,9 +10,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './profile/profile.component';
 
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import {
   IPublicClientApplication,
   PublicClientApplication,
@@ -27,6 +26,8 @@ import {
   MSAL_INSTANCE,
 } from '@azure/msal-angular';
 import { FailedComponent } from './failed/failed.component';
+import { AwsSignInComponent } from './aws-sign-in/aws-sign-in.component';
+import {FormsModule} from '@angular/forms';
 
 const isIE =
   window.navigator.userAgent.indexOf('MSIE ') > -1 ||
@@ -62,8 +63,8 @@ export function MSALInstanceFactory(): IPublicClientApplication {
   declarations: [
     AppComponent,
     HomeComponent,
-    ProfileComponent,
     FailedComponent,
+    AwsSignInComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,6 +76,7 @@ export function MSALInstanceFactory(): IPublicClientApplication {
     MatMenuModule,
     HttpClientModule,
     MsalModule,
+    FormsModule,
   ],
   providers: [
     {
